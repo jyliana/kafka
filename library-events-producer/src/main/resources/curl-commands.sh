@@ -1,7 +1,7 @@
 POST WITH-NULL-LIBRARY-EVENT-ID
 ---------------------
 curl -i \
--d '{"libraryEventId":null,"libraryEventType": "NEW","book":{"bookId":456,"bookName":"Kafka Using Spring Boot","bookAuthor":"Dilip"}}' \
+-d '{"libraryEventId":null,"libraryEventType": "NEW","2024-08-22T19:52:43.724427","book":{"bookId":456,"bookName":"Kafka Using Spring Boot","bookAuthor":"Dilip"}}' \
 -H "Content-Type: application/json" \
 -X POST http://localhost:8080/v1/libraryevent
 
