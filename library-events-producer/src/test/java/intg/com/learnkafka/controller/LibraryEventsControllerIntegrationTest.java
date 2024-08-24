@@ -1,4 +1,4 @@
-package com.kafka.controller;
+package com.learnkafka.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.learnkafka.LibraryEventsProducerApplication;

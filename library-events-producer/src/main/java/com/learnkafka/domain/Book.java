@@ -4,7 +4,10 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public record Book(
-		Integer bookId,
-		String bookName,
-		String bookAuthor) {
+		@NotNull
+		Integer id,
+		@NotBlank
+		String name,
+		@NotBlank
+		String author) {
 }

@@ -6,9 +6,9 @@ import jakarta.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 public record LibraryEvent(
-		Integer libraryEventId,
-		LibraryEventType libraryEventType,
-		LocalDateTime localDateTime,
+		Integer id,
+		LibraryEventType type,
+		LocalDateTime time,
 		@NotNull
 		@Valid
 		Book book) {
