@@ -22,7 +22,7 @@ public class Book {
   private String author;
 
   @OneToOne
-  @JoinColumn(name = "id")
+  @JoinColumn(name = "libraryEvent_id")
   private LibraryEvent libraryEvent;
 
 }
