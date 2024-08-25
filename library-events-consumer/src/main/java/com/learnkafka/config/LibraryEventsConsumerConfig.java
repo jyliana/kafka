@@ -5,10 +5,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
-import org.springframework.kafka.listener.ContainerProperties;
 
 @Configuration
-//@EnableKafka
 public class LibraryEventsConsumerConfig {
 
   @Bean
@@ -17,7 +15,8 @@ public class LibraryEventsConsumerConfig {
 		  ConsumerFactory<Object, Object> kafkaConsumerFactory) {
 	var factory = new ConcurrentKafkaListenerContainerFactory<>();
 	configurer.configure(factory, kafkaConsumerFactory);
-	factory.getContainerProperties().setAckMode(ContainerProperties.AckMode.MANUAL);
+//	factory.getContainerProperties().setAckMode(ContainerProperties.AckMode.MANUAL);
+	factory.setConcurrency(3);
 	return factory;
   }
 }
